@@ -1,5 +1,11 @@
 # bc-pst-aws-calc-reactjs
 
+![License](https://img.shields.io/github/license/mashape/apistatus.svg)
+
+![Travis - master](https://img.shields.io/travis/dwong-brighter/bc-pst-aws-calc-reactjs.svg)
+
+![Travis - develop](https://img.shields.io/travis/dwong-brighter/bc-pst-aws-calc-reactjs/develop.svg)
+
 Calculates self-assessed BC PST (British Columbia Provincial Sales Tax) for monthly AWS bills.
 
 This is a personal learning and demo project using the following technologies:
@@ -26,3 +32,9 @@ Example:
   - $6.00 CAD GST paid, which you can claim as an ITC against the GST you collect from your customers/clients
   - $186.00 CAD total bill
   - $12.60 CAD PST to self-assess and remit to the BC government later
+
+## Running it locally
+
+1. Open a command prompt and navigate to this directory.  Type ```npm start``` to start the Node.js server.
+2. Navigate to http://localhost:3000/
+3. If you want to stop the server, then do ```Ctrl+C``` in the command prompt where you started NPM.  Say "Y" (yes) to the prompt. 
