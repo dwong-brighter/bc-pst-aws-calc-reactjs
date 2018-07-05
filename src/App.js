@@ -8,10 +8,11 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">BC PST Calculator for AWS Billing</h1>
+          <h2 className="App-subtitle">Using ReactJS</h2>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Coming Soon! (We'll need to edit <code>src/App.js</code> and save to reload).
         </p>
       </div>
     );
