@@ -2,9 +2,9 @@
 
 ![License](https://img.shields.io/github/license/mashape/apistatus.svg)
 
-![Travis - master](https://img.shields.io/travis/dwong-brighter/bc-pst-aws-calc-reactjs.svg)
+![Travis - master](https://img.shields.io/travis/dwong-brighter/bc-pst-aws-calc-reactjs.svg?label=master)
 
-![Travis - develop](https://img.shields.io/travis/dwong-brighter/bc-pst-aws-calc-reactjs/develop.svg)
+![Travis - develop](https://img.shields.io/travis/dwong-brighter/bc-pst-aws-calc-reactjs/develop.svg?label=develop)
 
 Calculates self-assessed BC PST (British Columbia Provincial Sales Tax) for monthly AWS bills.
 
@@ -12,6 +12,10 @@ This is a personal learning and demo project using the following technologies:
 - ReactJS
 
 **DISCLAIMER: This project is provided as-is.  Do not rely on the accuracy of the calculations for doing your own taxes.  Consult a qualified accountant and/or tax lawyer.**
+
+## Demo
+
+The demo, which is built from the master branch, can be found at: https://dwong-brighter.github.io/bc-pst-aws-calc-reactjs/
 
 ## Background
 
