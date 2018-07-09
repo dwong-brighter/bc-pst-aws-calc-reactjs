@@ -1,7 +1,10 @@
 {
   "name": "bc-pst-aws-calc-reactjs",
   "version": "0.1.0",
+  "description": "BC PST Calculator for AWS Billing",
   "private": true,
+  "author": "Danita Wong",
+  "license": "MIT",
   "homepage": "https://dwong-brighter.github.io/bc-pst-aws-calc-reactjs",
   "dependencies": {
     "react": "^16.4.1",
