@@ -1,0 +1,9 @@
+.InputsFromBill-container {
+  border-color: black;
+  border-radius: 10px;
+  border-width: 5px;
+  background-color: palegreen;
+  display: grid;
+  margin: 10px;
+  padding: 10px;
+}

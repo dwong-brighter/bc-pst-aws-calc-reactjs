@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
+import InputsFromBill from './components/InputsFromBill';
+import ResultsArea from './components/ResultsArea';
+
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
+    const SAMPLE_DATA = {
+      exchangeRate: 1.2,
+      usdTotalAmount: 155,
+      usdGstAmount: 5
+    };
+    
+    var DATA = SAMPLE_DATA;
+    
     return (
       <div className="App">
         <header className="App-header">
@@ -12,8 +23,10 @@ class App extends Component {
           <h2 className="App-subtitle">Using ReactJS</h2>
         </header>
         <p className="App-intro">
-          Coming Soon! (We'll need to edit <code>src/App.js</code> and save to reload).
+          Work in Progress! (We'll need to edit <code>src/App.js</code> and save to reload).
         </p>
+        <InputsFromBill />
+        <ResultsArea data={DATA} />
       </div>
     );
   }
