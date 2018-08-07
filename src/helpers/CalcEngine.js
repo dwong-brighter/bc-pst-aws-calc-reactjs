@@ -8,8 +8,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-'use strict';
-
 /** TODO: More robust error handling! */
 /**
  * Engine for calculating values (e.g. PST given price, CAD value given US value

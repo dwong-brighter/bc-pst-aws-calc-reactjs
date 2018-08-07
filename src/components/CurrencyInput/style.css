@@ -1,0 +1,26 @@
+.CurrencyInput-container {
+  display: flex;
+}
+
+.CurrencyInput-amount-container,
+.CurrencyInput-rounding-container {
+  display: flex;
+  vertical-align: middle;
+}
+
+.CurrencyInput-amount,
+.CurrencyInput-rounding {
+  border-radius: 5px;
+  border-width: 0;
+  font-family: sans-serif;
+  margin: 5px 10px;
+  padding: 5px;
+}
+
+.CurrencyInput-amount {
+  width: 80px;
+}
+
+.CurrencyInput-rounding {
+  width: 40px;
+}
