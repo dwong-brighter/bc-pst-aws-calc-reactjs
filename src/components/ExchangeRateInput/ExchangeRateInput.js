@@ -17,7 +17,7 @@ export default function ExchangeRateInput (props) {
   return (
     <div className="ExchangeRateInput-container">
       <InputDescription description={props.description} />
-      <input className="ExchangeRateInput-value" name={props.name} type="text" pattern="\d+\.\d+*"></input>
+      <input className="ExchangeRateInput-value" name={props.name} type="text" pattern="\d+\.\d+"></input>
     </div>
   );
 }
