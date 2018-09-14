@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import InputsFromBill from './components/InputsFromBill';
 import NavigationBar from './components/NavigationBar';
 import ResultsArea from './components/ResultsArea';
+import TechStackInfo from './components/TechStackInfo';
 
-// TODO: Use the logo in a "Tech Info" area (a TechInfo component containing an
-// expansion panel)
-//import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -21,6 +19,7 @@ class App extends Component {
     return (
       <div>
         <NavigationBar />
+        <TechStackInfo />
         <InputsFromBill />
         <ResultsArea data={DATA} />
       </div>

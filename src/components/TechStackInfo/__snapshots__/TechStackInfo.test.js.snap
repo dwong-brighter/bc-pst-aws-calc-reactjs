@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TechStackInfo /> renders 1`] = `
+<div>
+  <WithStyles(ExpansionPanel)
+    defaultExpanded={true}
+  >
+    <WithStyles(ExpansionPanelSummary)
+      expandIcon={
+        <pure(ExpandMoreRoundedIcon)
+          aria-label="Expand"
+        />
+      }
+    >
+      <WithStyles(Typography)
+        color="inherit"
+        variant="subheading"
+      >
+        Technology Stack
+      </WithStyles(Typography)>
+    </WithStyles(ExpansionPanelSummary)>
+    <WithStyles(ExpansionPanelDetails)>
+      <WithStyles(Paper)>
+        <img
+          alt="logo"
+          src="logo.svg"
+        />
+        <WithStyles(List)>
+          <WithStyles(ListItem)
+            dense={true}
+          >
+            <WithStyles(ListItemText)
+              primary="ReactJS"
+            />
+          </WithStyles(ListItem)>
+          <WithStyles(ListItem)
+            dense={true}
+          >
+            <WithStyles(ListItemText)
+              primary="Material-UI"
+            />
+          </WithStyles(ListItem)>
+          <WithStyles(ListItem)
+            dense={true}
+          >
+            <WithStyles(ListItemText)
+              primary="Node.js (and NPM)"
+            />
+          </WithStyles(ListItem)>
+        </WithStyles(List)>
+      </WithStyles(Paper)>
+    </WithStyles(ExpansionPanelDetails)>
+  </WithStyles(ExpansionPanel)>
+</div>
+`;
