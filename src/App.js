@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import InputsFromBill from './components/InputsFromBill';
+import NavigationBar from './components/NavigationBar';
 import ResultsArea from './components/ResultsArea';
 
-import logo from './logo.svg';
+// TODO: Use the logo in a "Tech Info" area (a TechInfo component containing an
+// expansion panel)
+//import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -16,15 +19,8 @@ class App extends Component {
     var DATA = SAMPLE_DATA;
     
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">BC PST Calculator for AWS Billing</h1>
-          <h2 className="App-subtitle">Using ReactJS</h2>
-        </header>
-        <p className="App-intro">
-          Work in Progress! (We'll need to edit <code>src/App.js</code> and save to reload).
-        </p>
+      <div>
+        <NavigationBar />
         <InputsFromBill />
         <ResultsArea data={DATA} />
       </div>

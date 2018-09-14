@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavigationBar /> renders 1`] = `
+<div>
+  <WithStyles(AppBar)
+    position="static"
+  >
+    <WithStyles(Toolbar)
+      variant="dense"
+    >
+      <WithStyles(IconButton)
+        aria-label="Menu"
+        color="inherit"
+      >
+        <pure(MenuIcon) />
+      </WithStyles(IconButton)>
+      <WithStyles(Typography)
+        color="inherit"
+        variant="title"
+      >
+        BC PST Calculator for AWS Billing (Using ReactJS and Material-UI)
+      </WithStyles(Typography)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+</div>
+`;
