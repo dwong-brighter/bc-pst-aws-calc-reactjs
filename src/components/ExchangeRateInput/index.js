@@ -1,3 +1,1 @@
-import ExchangeRateInput from './ExchangeRateInput.js';
-
-export default ExchangeRateInput;
+export { default } from './ExchangeRateInput';

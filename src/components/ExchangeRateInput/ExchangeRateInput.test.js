@@ -1,8 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import ExchangeRateInput from './ExchangeRateInput';
 
-import ExchangeRateInput from './ExchangeRateInput.js';
-
-it('renders without props', () => {
-  shallow(<ExchangeRateInput />)
-})
+describe('<ExchangeRateInput />', () => {
+  test('renders', () => {
+    const wrapper = shallow(
+      <ExchangeRateInput
+        name="someRate"
+        description="some exchange rate"
+        foreignCurrencyCode="USD"
+      />);
+    expect(wrapper).toMatchSnapshot();
+  });
+});

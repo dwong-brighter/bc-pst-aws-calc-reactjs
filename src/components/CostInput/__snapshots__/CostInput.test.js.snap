@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CostInput /> renders 1`] = `
+<CostInput
+  classes={
+    Object {
+      "container": "CostInput-container-01",
+      "currencyAmountField": "CostInput-currencyAmountField-02",
+    }
+  }
+  currencyCode="USD"
+  description="some cost"
+  name="someCost"
+/>
+`;

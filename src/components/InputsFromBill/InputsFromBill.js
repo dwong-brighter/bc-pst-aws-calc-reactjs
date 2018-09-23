@@ -1,6 +1,6 @@
 import React from 'react';
 import ExchangeRateInput from '../ExchangeRateInput';
-import CurrencyInput from '../CurrencyInput';
+import CostInput from '../CostInput';
 
 /*
 Can't do the following at the moment due to
@@ -17,9 +17,9 @@ import './style.css';
 export default function InputsFromBill (props) {
   return (
     <div className="InputsFromBill-container">
-      <ExchangeRateInput name="exchangeRate" description="USD to CAD exchange rate (per AWS bill)" />
-      <CurrencyInput name="usdTotal" description="USD total cost (per AWS bill)" />
-      <CurrencyInput name="usdGst" description="USD GST amount (per AWS tax bill)" />
+      <ExchangeRateInput name="exchangeRate" description="Exchange rate (per AWS bill)" foreignCurrencyCode="USD" />
+      <CostInput name="usdTotal" description="Total cost (per AWS bill)" currencyCode="USD" />
+      <CostInput name="usdGst" description="GST amount (per AWS tax bill)" currencyCode="USD" />
     </div>
   );
 }
