@@ -9,18 +9,18 @@ const styles = theme => ({
     display: 'flex',
     flexWrap: 'wrap',
   },
-  exchangeRateField: {
+  currencyAmountField: {
     margin: theme.spacing.unit,
   }
 });
 
 /**
- * Formatter for a text field to become an exchange rate field.
+ * Formatter for a text field to become a currency field.
  * 
  * @param {*} props 
  */
-function NumberFormatExchangeRate (props) {
-  const { foreignCurrencyCode, inputRef, onChange, ...other } = props;
+function NumberFormatCurrency (props) {
+  const { currencyCode, inputRef, onChange, ...other } = props;
 
   return (
     <NumberFormat
@@ -35,22 +35,23 @@ function NumberFormatExchangeRate (props) {
       }}
       prefix="$"
       thousandSeparator
-      decimalScale={13}
+      decimalScale={2}
       fixedDecimalScale
-      suffix={' CAD per $1.00 ' + foreignCurrencyCode}
+      suffix={' ' + currencyCode}
     />
   );
 }
 
-NumberFormatExchangeRate.propTypes = {
-  foreignCurrencyCode: PropTypes.string.isRequired,
+NumberFormatCurrency.propTypes = {
+  currencyCode: PropTypes.string.isRequired,
   inputRef: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
-class ExchangeRateInput extends Component {
+class CostInput extends Component {
   state = {
-    rate: '1',
+    mainAmount: '0',
+    cadRounding: '0',
   }
 
   handleChange = name => event => {
@@ -60,21 +61,32 @@ class ExchangeRateInput extends Component {
   }
 
   render() {
-    const { rate } = this.state;
-    const { classes, name, description, foreignCurrencyCode } = this.props;
+    const { mainAmount, cadRounding } = this.state;
+    const { classes, name, description, currencyCode } = this.props;
 
+    var cadRoundingName = name + 'CadRounding';
     return (
       <div className={classes.container}>
         <TextField
-          className={classes.exchangeRateField}
-          fullWidth
+          className={classes.currencyAmountField}
           label={description}
-          value={rate}
-          onChange={this.handleChange('rate')}
+          value={mainAmount}
+          onChange={this.handleChange('mainAmount')}
           id={name}
           InputProps={{
             inputComponent: (props) =>
-              <NumberFormatExchangeRate foreignCurrencyCode={foreignCurrencyCode} {...props} />,
+              <NumberFormatCurrency currencyCode={currencyCode} {...props} />,
+          }}
+        />
+        <TextField
+          className={classes.currencyAmountField}
+          label="Rounding"
+          value={cadRounding}
+          onChange={this.handleChange('cadRounding')}
+          id={cadRoundingName}
+          InputProps={{
+            inputComponent: (props) =>
+              <NumberFormatCurrency currencyCode="CAD" {...props} />,
           }}
         />
       </div>
@@ -82,11 +94,11 @@ class ExchangeRateInput extends Component {
   }
 }
 
-ExchangeRateInput.propTypes = {
+CostInput.propTypes = {
   classes: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  foreignCurrencyCode: PropTypes.string.isRequired,
+  currencyCode: PropTypes.string.isRequired,
 };
 
-export default withStyles(styles)(ExchangeRateInput);
+export default withStyles(styles)(CostInput);
