@@ -33,11 +33,10 @@ function NumberFormatExchangeRate (props) {
           },
         });
       }}
-      prefix="$"
       thousandSeparator
       decimalScale={13}
       fixedDecimalScale
-      suffix={' CAD per $1.00 ' + foreignCurrencyCode}
+      suffix={' CAD to 1 ' + foreignCurrencyCode}
     />
   );
 }
