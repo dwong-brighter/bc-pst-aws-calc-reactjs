@@ -4,8 +4,8 @@ exports[`<CostInput /> renders 1`] = `
 <CostInput
   classes={
     Object {
-      "container": "CostInput-container-01",
-      "currencyAmountField": "CostInput-currencyAmountField-02",
+      "container": "CostInput-container-1",
+      "currencyAmountField": "CostInput-currencyAmountField-2",
     }
   }
   currencyCode="USD"
