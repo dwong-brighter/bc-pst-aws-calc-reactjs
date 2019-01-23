@@ -4,8 +4,8 @@ exports[`<ExchangeRateInput /> renders 1`] = `
 <ExchangeRateInput
   classes={
     Object {
-      "container": "ExchangeRateInput-container-01",
-      "exchangeRateField": "ExchangeRateInput-exchangeRateField-02",
+      "container": "ExchangeRateInput-container-1",
+      "exchangeRateField": "ExchangeRateInput-exchangeRateField-2",
     }
   }
   description="some exchange rate"
