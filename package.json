@@ -28,13 +28,23 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "gh-pages": "^1.2.0",
     "jest": "^24.5.0",
-    "jest-enzyme": "^6.0.2",
+    "jest-enzyme": "^7.1.0",
     "react-test-renderer": "^16.4.1"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not ie <= 11",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
