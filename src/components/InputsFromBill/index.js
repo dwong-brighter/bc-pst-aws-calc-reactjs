@@ -1,3 +1,1 @@
-import InputsFromBill from './InputsFromBill.js'
-
-export default InputsFromBill
+export { default } from './InputsFromBill';

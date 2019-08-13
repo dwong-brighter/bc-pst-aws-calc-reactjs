@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import NumberFormat from 'react-number-format';
 import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/styles';
+import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
-import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+const useStyles = makeStyles({
   container: {
     display: 'flex',
     flexWrap: 'wrap',
+    width: '100%',
   },
   currencyAmountField: {
-    margin: theme.spacing(1),
+    margin: '0.5rem',
+    minWidth: '20rem',
   }
 });
 
@@ -48,57 +51,45 @@ NumberFormatCurrency.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-class CostInput extends Component {
-  state = {
-    mainAmount: '0',
-    cadRounding: '0',
-  }
+function CostInput(props) {
+  const { name, description, currencyCode } = props;
+  const classes = useStyles();
+  const [mainAmount, setMainAmount] = useState(0);
+  const [cadRounding, setCadRounding] = useState(0);
 
-  handleChange = name => event => {
-    this.setState({
-      [name]: event.target.value,
-    });
-  }
-
-  render() {
-    const { mainAmount, cadRounding } = this.state;
-    const { classes, name, description, currencyCode } = this.props;
-
-    var cadRoundingName = name + 'CadRounding';
-    return (
-      <div className={classes.container}>
-        <TextField
-          className={classes.currencyAmountField}
-          label={description}
-          value={mainAmount}
-          onChange={this.handleChange('mainAmount')}
-          id={name}
-          InputProps={{
-            inputComponent: (props) =>
-              <NumberFormatCurrency currencyCode={currencyCode} {...props} />,
-          }}
-        />
-        <TextField
-          className={classes.currencyAmountField}
-          label="Rounding"
-          value={cadRounding}
-          onChange={this.handleChange('cadRounding')}
-          id={cadRoundingName}
-          InputProps={{
-            inputComponent: (props) =>
-              <NumberFormatCurrency currencyCode="CAD" {...props} />,
-          }}
-        />
-      </div>
-    );
-  }
+  let cadRoundingName = name + 'CadRounding';
+  return (
+    <Box className={classes.container}>
+      <TextField
+        className={classes.currencyAmountField}
+        label={description}
+        value={mainAmount}
+        onChange={(event) => setMainAmount(event.target.value)}
+        id={name}
+        InputProps={{
+          inputComponent: (props) =>
+            <NumberFormatCurrency currencyCode={currencyCode} {...props} />,
+        }}
+      />
+      <TextField
+        className={classes.currencyAmountField}
+        label="Rounding"
+        value={cadRounding}
+        onChange={(event) => setCadRounding(event.target.value)}
+        id={cadRoundingName}
+        InputProps={{
+          inputComponent: (props) =>
+            <NumberFormatCurrency currencyCode="CAD" {...props} />,
+        }}
+      />
+    </Box>
+  );
 }
 
 CostInput.propTypes = {
-  classes: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   currencyCode: PropTypes.string.isRequired,
 };
 
-export default withStyles(styles)(CostInput);
+export default CostInput;

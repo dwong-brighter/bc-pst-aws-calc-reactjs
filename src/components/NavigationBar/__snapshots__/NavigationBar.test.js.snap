@@ -1,26 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<NavigationBar /> renders 1`] = `
-<div>
-  <WithStyles(ForwardRef(AppBar))
-    position="static"
+<WithStyles(ForwardRef(AppBar))
+  position="static"
+>
+  <WithStyles(ForwardRef(Toolbar))
+    variant="dense"
   >
-    <WithStyles(ForwardRef(Toolbar))
-      variant="dense"
+    <WithStyles(ForwardRef(IconButton))
+      aria-label="Menu"
+      color="inherit"
+      edge="start"
     >
-      <WithStyles(ForwardRef(IconButton))
-        aria-label="Menu"
-        color="inherit"
-      >
-        <MenuIcon />
-      </WithStyles(ForwardRef(IconButton))>
-      <WithStyles(ForwardRef(Typography))
-        color="inherit"
-        variant="h6"
-      >
-        BC PST Calculator for AWS Billing (Using ReactJS and Material-UI)
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Toolbar))>
-  </WithStyles(ForwardRef(AppBar))>
-</div>
+      <MenuIcon />
+    </WithStyles(ForwardRef(IconButton))>
+    <WithStyles(ForwardRef(Typography))
+      color="inherit"
+      variant="h6"
+    >
+      BC PST Calculator for AWS Billing (Using ReactJS and Material-UI)
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Toolbar))>
+</WithStyles(ForwardRef(AppBar))>
 `;

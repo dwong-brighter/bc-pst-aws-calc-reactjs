@@ -1,3 +1,1 @@
-import ResultsArea from './ResultsArea.js'
-
-export default ResultsArea
+export { default } from './ResultsArea';
