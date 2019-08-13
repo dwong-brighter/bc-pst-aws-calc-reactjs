@@ -5,12 +5,12 @@ import CalcEngine from '../../helpers/CalcEngine';
 
 const useStyles = makeStyles({
   container: {
-    alignContent: 'left',
     backgroundColor: 'lightblue',
     borderRadius: '0.5rem',
     display: 'block',
     margin: '1.5rem 1rem',
     padding: '0.5rem 1rem',
+    textAlign: 'left',
   }
 });
 
