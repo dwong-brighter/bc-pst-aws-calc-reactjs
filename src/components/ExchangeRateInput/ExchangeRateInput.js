@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import NumberFormat from 'react-number-format';
 import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/styles';
 import TextField from '@material-ui/core/TextField';
-import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
+const useStyles = makeStyles({
   exchangeRateField: {
-    margin: theme.spacing(1),
+    margin: '0.5rem',
+    maxWidth: '50%',
   }
 });
 
@@ -47,45 +44,30 @@ NumberFormatExchangeRate.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-class ExchangeRateInput extends Component {
-  state = {
-    rate: '1',
-  }
+function ExchangeRateInput(props) {
+  const { name, description, foreignCurrencyCode } = props;
+  const classes = useStyles();
+  const [rate, setRate] = useState(1);
 
-  handleChange = name => event => {
-    this.setState({
-      [name]: event.target.value,
-    });
-  }
-
-  render() {
-    const { rate } = this.state;
-    const { classes, name, description, foreignCurrencyCode } = this.props;
-
-    return (
-      <div className={classes.container}>
-        <TextField
-          className={classes.exchangeRateField}
-          fullWidth
-          label={description}
-          value={rate}
-          onChange={this.handleChange('rate')}
-          id={name}
-          InputProps={{
-            inputComponent: (props) =>
-              <NumberFormatExchangeRate foreignCurrencyCode={foreignCurrencyCode} {...props} />,
-          }}
-        />
-      </div>
-    );
-  }
+  return (
+    <TextField
+      className={classes.exchangeRateField}
+      label={description}
+      value={rate}
+      onChange={(event) => setRate(event.target.value)}
+      id={name}
+      InputProps={{
+        inputComponent: (props) =>
+          <NumberFormatExchangeRate foreignCurrencyCode={foreignCurrencyCode} {...props} />,
+      }}
+    />
+  );
 }
 
 ExchangeRateInput.propTypes = {
-  classes: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   foreignCurrencyCode: PropTypes.string.isRequired,
 };
 
-export default withStyles(styles)(ExchangeRateInput);
+export default ExchangeRateInput;

@@ -1,15 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CostInput /> renders 1`] = `
-<CostInput
-  classes={
-    Object {
-      "container": "CostInput-container-1",
-      "currencyAmountField": "CostInput-currencyAmountField-2",
+<Styled(MuiBox)
+  className="makeStyles-container-1"
+>
+  <WithStyles(ForwardRef(TextField))
+    InputProps={
+      Object {
+        "inputComponent": [Function],
+      }
     }
-  }
-  currencyCode="USD"
-  description="some cost"
-  name="someCost"
-/>
+    className="makeStyles-currencyAmountField-2"
+    id="someCost"
+    label="some cost"
+    onChange={[Function]}
+    value={0}
+  />
+  <WithStyles(ForwardRef(TextField))
+    InputProps={
+      Object {
+        "inputComponent": [Function],
+      }
+    }
+    className="makeStyles-currencyAmountField-2"
+    id="someCostCadRounding"
+    label="Rounding"
+    onChange={[Function]}
+    value={0}
+  />
+</Styled(MuiBox)>
 `;

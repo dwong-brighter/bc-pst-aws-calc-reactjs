@@ -1,15 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ExchangeRateInput /> renders 1`] = `
-<ExchangeRateInput
-  classes={
+<WithStyles(ForwardRef(TextField))
+  InputProps={
     Object {
-      "container": "ExchangeRateInput-container-1",
-      "exchangeRateField": "ExchangeRateInput-exchangeRateField-2",
+      "inputComponent": [Function],
     }
   }
-  description="some exchange rate"
-  foreignCurrencyCode="USD"
-  name="someRate"
+  className="makeStyles-exchangeRateField-1"
+  id="someRate"
+  label="some exchange rate"
+  onChange={[Function]}
+  value={1}
 />
 `;
