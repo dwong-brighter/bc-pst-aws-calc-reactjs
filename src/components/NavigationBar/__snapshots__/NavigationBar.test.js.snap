@@ -2,25 +2,25 @@
 
 exports[`<NavigationBar /> renders 1`] = `
 <div>
-  <WithStyles(AppBar)
+  <WithStyles(ForwardRef(AppBar))
     position="static"
   >
-    <WithStyles(Toolbar)
+    <WithStyles(ForwardRef(Toolbar))
       variant="dense"
     >
-      <WithStyles(IconButton)
+      <WithStyles(ForwardRef(IconButton))
         aria-label="Menu"
         color="inherit"
       >
-        <pure(MenuIcon) />
-      </WithStyles(IconButton)>
-      <WithStyles(Typography)
+        <MenuIcon />
+      </WithStyles(ForwardRef(IconButton))>
+      <WithStyles(ForwardRef(Typography))
         color="inherit"
-        variant="title"
+        variant="h6"
       >
         BC PST Calculator for AWS Billing (Using ReactJS and Material-UI)
-      </WithStyles(Typography)>
-    </WithStyles(Toolbar)>
-  </WithStyles(AppBar)>
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Toolbar))>
+  </WithStyles(ForwardRef(AppBar))>
 </div>
 `;

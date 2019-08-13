@@ -17,7 +17,7 @@ class TechStackInfo extends Component {
       <div>
         <ExpansionPanel defaultExpanded>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon aria-label="Expand" />}>
-            <Typography variant="subheading" color="inherit">Technology Stack</Typography>
+            <Typography variant="subtitle1" color="inherit">Technology Stack</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Paper>
@@ -37,7 +37,7 @@ class TechStackInfo extends Component {
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>
-      );
+    );
   }
 }
 
