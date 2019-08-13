@@ -2,54 +2,54 @@
 
 exports[`<TechStackInfo /> renders 1`] = `
 <div>
-  <WithStyles(ExpansionPanel)
+  <WithStyles(ForwardRef(ExpansionPanel))
     defaultExpanded={true}
   >
-    <WithStyles(ExpansionPanelSummary)
+    <WithStyles(ForwardRef(ExpansionPanelSummary))
       expandIcon={
-        <pure(ExpandMoreRoundedIcon)
+        <Memo
           aria-label="Expand"
         />
       }
     >
-      <WithStyles(Typography)
+      <WithStyles(ForwardRef(Typography))
         color="inherit"
-        variant="subheading"
+        variant="subtitle1"
       >
         Technology Stack
-      </WithStyles(Typography)>
-    </WithStyles(ExpansionPanelSummary)>
-    <WithStyles(ExpansionPanelDetails)>
-      <WithStyles(Paper)>
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(ExpansionPanelSummary))>
+    <WithStyles(ForwardRef(ExpansionPanelDetails))>
+      <WithStyles(ForwardRef(Paper))>
         <img
           alt="logo"
           src="logo.svg"
         />
-        <WithStyles(List)>
-          <WithStyles(ListItem)
+        <WithStyles(ForwardRef(List))>
+          <WithStyles(ForwardRef(ListItem))
             dense={true}
           >
-            <WithStyles(ListItemText)
+            <WithStyles(ForwardRef(ListItemText))
               primary="ReactJS"
             />
-          </WithStyles(ListItem)>
-          <WithStyles(ListItem)
+          </WithStyles(ForwardRef(ListItem))>
+          <WithStyles(ForwardRef(ListItem))
             dense={true}
           >
-            <WithStyles(ListItemText)
+            <WithStyles(ForwardRef(ListItemText))
               primary="Material-UI"
             />
-          </WithStyles(ListItem)>
-          <WithStyles(ListItem)
+          </WithStyles(ForwardRef(ListItem))>
+          <WithStyles(ForwardRef(ListItem))
             dense={true}
           >
-            <WithStyles(ListItemText)
+            <WithStyles(ForwardRef(ListItemText))
               primary="Node.js (and NPM)"
             />
-          </WithStyles(ListItem)>
-        </WithStyles(List)>
-      </WithStyles(Paper)>
-    </WithStyles(ExpansionPanelDetails)>
-  </WithStyles(ExpansionPanel)>
+          </WithStyles(ForwardRef(ListItem))>
+        </WithStyles(ForwardRef(List))>
+      </WithStyles(ForwardRef(Paper))>
+    </WithStyles(ForwardRef(ExpansionPanelDetails))>
+  </WithStyles(ForwardRef(ExpansionPanel))>
 </div>
 `;

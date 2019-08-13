@@ -14,7 +14,7 @@ class NavigationBar extends Component {
             <IconButton color="inherit" aria-label="Menu">
               <MenuButton />
             </IconButton>
-            <Typography variant="title" color="inherit">BC PST Calculator for AWS Billing (Using ReactJS and Material-UI)</Typography>
+            <Typography variant="h6" color="inherit">BC PST Calculator for AWS Billing (Using ReactJS and Material-UI)</Typography>
           </Toolbar>
         </AppBar>
       </div>
