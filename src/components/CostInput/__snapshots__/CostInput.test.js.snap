@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CostInput /> renders 1`] = `
+exports[`<CostInput /> renders without crashing 1`] = `
 <Styled(MuiBox)
   className="makeStyles-container-1"
 >
@@ -14,7 +14,7 @@ exports[`<CostInput /> renders 1`] = `
     id="someCost"
     label="some cost"
     onChange={[Function]}
-    value={0}
+    value={42}
   />
   <WithStyles(ForwardRef(TextField))
     InputProps={
@@ -26,7 +26,7 @@ exports[`<CostInput /> renders 1`] = `
     id="someCostCadRounding"
     label="Rounding"
     onChange={[Function]}
-    value={0}
+    value={0.42}
   />
 </Styled(MuiBox)>
 `;

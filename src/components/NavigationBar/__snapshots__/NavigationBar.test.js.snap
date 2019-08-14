@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<NavigationBar /> renders 1`] = `
+exports[`<NavigationBar /> renders without crashing 1`] = `
 <WithStyles(ForwardRef(AppBar))
   position="static"
 >

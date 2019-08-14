@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<Styled(MuiBox)
+  className="makeStyles-container-1"
+>
+  <ExchangeRateInput
+    description="Exchange rate (per AWS bill)"
+    foreignCurrencyCode="USD"
+    initialRate={4.2}
+    name="exchangeRate"
+    onRateChange={[Function]}
+  />
+  <CostInput
+    currencyCode="USD"
+    description="Total cost (per AWS bill)"
+    initialCadRounding={0.42}
+    initialMainAmount={42}
+    name="usdTotal"
+    onCadRoundingChange={[Function]}
+    onMainAmountChange={[Function]}
+  />
+  <CostInput
+    currencyCode="USD"
+    description="GST amount (per AWS tax bill)"
+    initialCadRounding={0.42}
+    initialMainAmount={42}
+    name="usdGst"
+    onCadRoundingChange={[Function]}
+    onMainAmountChange={[Function]}
+  />
+</Styled(MuiBox)>
+`;

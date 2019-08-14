@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import NavigationBar from './NavigationBar';
 
 describe('<NavigationBar />', () => {
-  test('renders', () => {
+  it('renders without crashing', () => {
     const wrapper = shallow(<NavigationBar />);
     expect(wrapper).toMatchSnapshot();
   });

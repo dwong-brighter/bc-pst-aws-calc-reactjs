@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ResultsArea /> renders without crashing 1`] = `
+<Styled(MuiBox)
+  className="makeStyles-container-1"
+>
+  <p>
+    USD to CAD Exchange Rate is 
+    <strong>
+      4.20000000000000
+    </strong>
+  </p>
+  <p>
+    USD Total of 
+    <strong>
+      $
+      42.00
+    </strong>
+     is 
+    <strong>
+      $
+      176.40
+    </strong>
+     CAD
+  </p>
+  <p>
+    USD Net Price Subject to GST and PST of 
+    <strong>
+      $
+      840.00
+    </strong>
+     is 
+    <strong>
+      $
+      3528.00
+    </strong>
+     CAD
+  </p>
+  <p>
+    USD Net Price Subject to PST only of 
+    <strong>
+      $
+      -840.00
+    </strong>
+     is 
+    <strong>
+      $
+      -3528.00
+    </strong>
+     CAD
+  </p>
+  <p>
+    USD Net Cost of (all subject to PST) 
+    <strong>
+      $
+      0.00
+    </strong>
+     is 
+    <strong>
+      $
+      0.00
+    </strong>
+     CAD
+  </p>
+  <p>
+    USD GST of 
+    <strong>
+      $
+      42.00
+    </strong>
+     is 
+    <strong>
+      $
+      176.40
+    </strong>
+     CAD
+  </p>
+  <p>
+    USD PST to Self-Assess of 
+    <strong>
+      $
+      0.00
+    </strong>
+     is 
+    <strong>
+      $
+      0.00
+    </strong>
+     CAD
+  </p>
+  <p>
+    <em>
+      CAD Total Rounding is 
+      <strong>
+        $
+        0.42
+      </strong>
+       CAD
+    </em>
+  </p>
+  <p>
+    <em>
+      CAD GST Rounding is 
+      <strong>
+        $
+        0.42
+      </strong>
+       CAD
+    </em>
+  </p>
+</Styled(MuiBox)>
+`;

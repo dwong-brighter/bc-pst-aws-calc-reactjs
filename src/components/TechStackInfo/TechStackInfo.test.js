@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import TechStackInfo from './TechStackInfo';
 
 describe('<TechStackInfo />', () => {
-  test('renders', () => {
+  it('renders without crashing', () => {
     const wrapper = shallow(<TechStackInfo />);
     expect(wrapper).toMatchSnapshot();
   });

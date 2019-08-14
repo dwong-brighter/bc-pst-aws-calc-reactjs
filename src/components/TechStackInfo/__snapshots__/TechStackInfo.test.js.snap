@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TechStackInfo /> renders 1`] = `
+exports[`<TechStackInfo /> renders without crashing 1`] = `
 <WithStyles(ForwardRef(ExpansionPanel))
   defaultExpanded={true}
 >
