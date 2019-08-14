@@ -45,16 +45,28 @@ NumberFormatExchangeRate.propTypes = {
 };
 
 function ExchangeRateInput(props) {
-  const { name, description, foreignCurrencyCode } = props;
+  const { 
+    name,
+    description,
+    foreignCurrencyCode,
+    initialRate,
+    onRateChange
+  } = props;
+
   const classes = useStyles();
-  const [rate, setRate] = useState(1);
+
+  const [rate, setRate] = useState(initialRate);
 
   return (
     <TextField
       className={classes.exchangeRateField}
       label={description}
       value={rate}
-      onChange={(event) => setRate(event.target.value)}
+      onChange={(event) => {
+        let newRate = parseFloat(event.target.value);
+        setRate(newRate); // update our state
+        onRateChange(newRate); // update the app's state
+      }}
       id={name}
       InputProps={{
         inputComponent: (props) =>
@@ -68,6 +80,8 @@ ExchangeRateInput.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   foreignCurrencyCode: PropTypes.string.isRequired,
+  initialRate: PropTypes.number.isRequired,
+  onRateChange: PropTypes.func.isRequired,
 };
 
 export default ExchangeRateInput;

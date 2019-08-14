@@ -3,12 +3,17 @@ import { shallow } from 'enzyme';
 
 import ResultsArea from './ResultsArea.js';
 
-it('needs props to render', () => {
-  const TEST_DATA = {
-    exchangeRate: 1.2,
-    usdTotalAmount: 155,
-    usdGstAmount: 5
-  };
-
-  shallow(<ResultsArea data={TEST_DATA} />);
+describe('<ResultsArea />', () => {
+  it('renders without crashing', () => {
+    const wrapper = shallow(
+      <ResultsArea
+        exchangeRate={4.2}
+        usdTotalAmount={42}
+        usdGstAmount={42}
+        cadTotalRounding={0.42}
+        cadGstRounding={0.42}
+      />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
+

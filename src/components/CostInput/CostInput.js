@@ -52,10 +52,20 @@ NumberFormatCurrency.propTypes = {
 };
 
 function CostInput(props) {
-  const { name, description, currencyCode } = props;
+  const {
+    name,
+    description,
+    currencyCode,
+    initialMainAmount,
+    initialCadRounding,
+    onMainAmountChange,
+    onCadRoundingChange,
+  } = props;
+
   const classes = useStyles();
-  const [mainAmount, setMainAmount] = useState(0);
-  const [cadRounding, setCadRounding] = useState(0);
+
+  const [mainAmount, setMainAmount] = useState(initialMainAmount);
+  const [cadRounding, setCadRounding] = useState(initialCadRounding);
 
   let cadRoundingName = name + 'CadRounding';
   return (
@@ -64,7 +74,11 @@ function CostInput(props) {
         className={classes.currencyAmountField}
         label={description}
         value={mainAmount}
-        onChange={(event) => setMainAmount(event.target.value)}
+        onChange={(event) => {
+          let newAmount = parseFloat(event.target.value);
+          setMainAmount(newAmount); // update our state
+          onMainAmountChange(newAmount); // update the app's state
+        }}
         id={name}
         InputProps={{
           inputComponent: (props) =>
@@ -75,7 +89,11 @@ function CostInput(props) {
         className={classes.currencyAmountField}
         label="Rounding"
         value={cadRounding}
-        onChange={(event) => setCadRounding(event.target.value)}
+        onChange={(event) => {
+          let newRounding = parseFloat(event.target.value);
+          setCadRounding(newRounding); // update our state
+          onCadRoundingChange(newRounding); // update the app's state
+        }}
         id={cadRoundingName}
         InputProps={{
           inputComponent: (props) =>
@@ -90,6 +108,10 @@ CostInput.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   currencyCode: PropTypes.string.isRequired,
+  initialMainAmount: PropTypes.number.isRequired,
+  initialCadRounding: PropTypes.number.isRequired,
+  onMainAmountChange: PropTypes.func.isRequired,
+  onCadRoundingChange: PropTypes.func.isRequired
 };
 
 export default CostInput;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import Box from '@material-ui/core/Box';
 import CalcEngine from '../../helpers/CalcEngine';
@@ -15,8 +16,16 @@ const useStyles = makeStyles({
 });
 
 function ResultsArea (props) {
-  const {exchangeRate, usdTotalAmount, usdGstAmount} = props.data;
+  const {
+    exchangeRate,
+    usdTotalAmount,
+    usdGstAmount,
+    cadTotalRounding,
+    cadGstRounding
+  } = props;
+
   const classes = useStyles();
+
   const usdNetAmount = CalcEngine.calculateUsdNetCost(usdTotalAmount, usdGstAmount);
   const usdNetAmountGstAndPstTaxable = CalcEngine.calculateUsdNetCostSubjectToGstAndPst(usdGstAmount);
   const usdNetAmountOnlyPstTaxable = CalcEngine.calculateUsdNetCostSubjectToPstOnly(usdTotalAmount, usdGstAmount);
@@ -31,9 +40,19 @@ function ResultsArea (props) {
       <p>USD Net Cost of (all subject to PST) <strong>${usdNetAmount.toFixed(2)}</strong> is <strong>${CalcEngine.convertUsdToCad(usdNetAmount, exchangeRate).toFixed(2)}</strong> CAD</p>
       <p>USD GST of <strong>${usdGstAmount.toFixed(2)}</strong> is <strong>${CalcEngine.convertUsdToCad(usdGstAmount, exchangeRate).toFixed(2)}</strong> CAD</p>
       <p>USD PST to Self-Assess of <strong>${usdPstAmount.toFixed(2)}</strong> is <strong>${CalcEngine.convertUsdToCad(usdPstAmount, exchangeRate).toFixed(2)}</strong> CAD</p>
+      <p><em>CAD Total Rounding is <strong>${cadTotalRounding.toFixed(2)}</strong> CAD</em></p>
+      <p><em>CAD GST Rounding is <strong>${cadGstRounding.toFixed(2)}</strong> CAD</em></p>
     </Box>
   );
 }
+
+ResultsArea.propTypes = {
+  exchangeRate: PropTypes.number.isRequired,
+  usdTotalAmount: PropTypes.number.isRequired,
+  usdGstAmount: PropTypes.number.isRequired,
+  cadTotalRounding: PropTypes.number.isRequired,
+  cadGstRounding: PropTypes.number.isRequired
+};
 
 export default ResultsArea;
 
