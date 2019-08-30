@@ -6,7 +6,7 @@ exports[`<TechStackInfo /> renders without crashing 1`] = `
 >
   <WithStyles(ForwardRef(ExpansionPanelSummary))
     expandIcon={
-      <Memo
+      <Memo(ExpandMoreRoundedIcon)
         aria-label="Expand"
       />
     }
