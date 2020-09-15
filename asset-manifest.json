@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/bc-pst-aws-calc-reactjs/static/css/main.a2b7b0b6.chunk.css",
+    "main.js": "/bc-pst-aws-calc-reactjs/static/js/main.b93bf34d.chunk.js",
+    "main.js.map": "/bc-pst-aws-calc-reactjs/static/js/main.b93bf34d.chunk.js.map",
+    "runtime-main.js": "/bc-pst-aws-calc-reactjs/static/js/runtime-main.389419ce.js",
+    "runtime-main.js.map": "/bc-pst-aws-calc-reactjs/static/js/runtime-main.389419ce.js.map",
+    "static/js/2.d03185ad.chunk.js": "/bc-pst-aws-calc-reactjs/static/js/2.d03185ad.chunk.js",
+    "static/js/2.d03185ad.chunk.js.map": "/bc-pst-aws-calc-reactjs/static/js/2.d03185ad.chunk.js.map",
+    "index.html": "/bc-pst-aws-calc-reactjs/index.html",
+    "precache-manifest.6c8ee0e8f7a225fcf34c52c388ef684a.js": "/bc-pst-aws-calc-reactjs/precache-manifest.6c8ee0e8f7a225fcf34c52c388ef684a.js",
+    "service-worker.js": "/bc-pst-aws-calc-reactjs/service-worker.js",
+    "static/css/main.a2b7b0b6.chunk.css.map": "/bc-pst-aws-calc-reactjs/static/css/main.a2b7b0b6.chunk.css.map",
+    "static/js/2.d03185ad.chunk.js.LICENSE.txt": "/bc-pst-aws-calc-reactjs/static/js/2.d03185ad.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/bc-pst-aws-calc-reactjs/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.389419ce.js",
+    "static/js/2.d03185ad.chunk.js",
+    "static/css/main.a2b7b0b6.chunk.css",
+    "static/js/main.b93bf34d.chunk.js"
+  ]
+}
