@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TechStackInfo /> renders without crashing 1`] = `
-<WithStyles(ForwardRef(ExpansionPanel))
+<WithStyles(ForwardRef(Accordion))
   defaultExpanded={true}
 >
-  <WithStyles(ForwardRef(ExpansionPanelSummary))
+  <WithStyles(ForwardRef(AccordionSummary))
     expandIcon={
       <UNDEFINED
         aria-label="Expand"
@@ -17,8 +17,8 @@ exports[`<TechStackInfo /> renders without crashing 1`] = `
     >
       Technology Stack
     </WithStyles(ForwardRef(Typography))>
-  </WithStyles(ForwardRef(ExpansionPanelSummary))>
-  <WithStyles(ForwardRef(ExpansionPanelDetails))
+  </WithStyles(ForwardRef(AccordionSummary))>
+  <WithStyles(ForwardRef(AccordionDetails))
     className="makeStyles-details-3"
   >
     <WithStyles(ForwardRef(Avatar))
@@ -49,6 +49,6 @@ exports[`<TechStackInfo /> renders without crashing 1`] = `
         />
       </WithStyles(ForwardRef(ListItem))>
     </WithStyles(ForwardRef(List))>
-  </WithStyles(ForwardRef(ExpansionPanelDetails))>
-</WithStyles(ForwardRef(ExpansionPanel))>
+  </WithStyles(ForwardRef(AccordionDetails))>
+</WithStyles(ForwardRef(Accordion))>
 `;
